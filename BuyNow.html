@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This site is about Sri Lankan Eco-friendly products">
+    <title>Sri Lankan Eco-friendly Products</title>
+    <link rel="stylesheet" href="Styles/normalize.css">
+    <link rel="stylesheet" href="Styles/styles.css"> 
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="Images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="images/browserconfig.xml">
+    <meta name="theme-color" content="#84680a"> 
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1>Buy Now</h1>
+      </header>
+      <!-- Main navigation titles with links to each webpage in the application as an unordered list -->
+      <nav class="mainNav">
+        <ul>
+          <li><a href="index.html"><span class="navText">Home</span></a></li>
+            <li><a href="Products.html"><span class="navText">Products</span></a></li>
+            <li><a href="Manufacturers.html"><span class="navText">Manufacturers</span></a></li>
+            <li><a href="BuyNow.html"><span class="navText">Buy Now</span></a></li>
+            <li><a href="ContactUs.html"><span class="navText">Contact Us</span></a></li>
+        </ul>
+      </nav>
+      <!-- main image -->
+      <img id="mainImg" src="Images/tree.jpg" alt="Tree">
+      <main>
+        <div id="prodContainer">
+          <form method="get">
+            <fieldset>
+                <h3>Product Manufacturer</h3> 
+                <p>
+                    <label for="manuf">Choose Manufacturer:</label>
+                    <select name="manuf" id="manuf">
+                      <option disabled selected value>---</option>
+                      <option value="Eco-Products SL">Eco-Products SL</option>
+                      <option value="Ecoware">Ecoware</option>
+                      <option value="Trickledown">Trickledown</option>
+                      <option value="BacktoEarth">BacktoEarth</option>
+                    </select>
+                </p>
+            </fieldset><br>
+            <fieldset>
+                <h3>Product</h3> 
+                <p>
+                  <label for="buyprod">Choose Product:</label>
+                  <select name="buyprod" id="buyprod">
+                    <option disabled selected value>---</option>
+                    <option value="Bag">Bags (1000LKR)</option>
+                    <option value="Plate">Plates (2000LKR)</option>
+                    <option value="Mug">Mugs (2500LKR)</option>
+                    <option value="Soap">Soap (800LKR)</option>
+                  </select>
+                  <label for="quan">Quantity:</label>
+                  <input type="number" id="quan" name="quan" value="0">
+                </p>
+            </fieldset><br>
+              <fieldset>
+                  <h3>Size</h3> 
+                  <p>
+                    <label for="size">Choose Size:</label>
+                    <select name="size" id="size">
+                      <option value="S">Small</option>
+                      <option selected="selected" value="M">Medium (2500LKR)</option>
+                      <option value="L">Large (5000LKR)</option>
+                    </select>
+                  </p>
+              </fieldset><br>
+              <fieldset>
+                  <h3>Extras</h3> 
+                  <p>
+                    <label for="extra">Choose Extras (Optional):</label><br><br>
+                    <input style="display: none;" id="extra">
+                    <input type="checkbox" id="extra1" name="extra1" value="Yes">
+                    <label for="extra1">Eco-Friendly Packaging (500LKR)</label><br>
+                    <input type="checkbox" id="extra2" name="extra2" value="Yes">
+                    <label for="extra2">Eco-Friendly Greeting Cards (1000LKR)</label><br>
+                    <input type="checkbox" id="extra3" name="extra3" value="Yes">
+                    <label for="extra3">Eco-Friendly Decorations (1500LKR)</label><br>
+                  </p>
+              </fieldset><br>
+            <p>
+              <button type="reset" name="order" id="addord" class="btn btn-addord" onclick="addorder()">Add to Order</button>
+            </p>                
+            <p>
+              <button type="reset" name="order" id="addfav" class="btn btn-addfav" onclick="addfavor()">Add to Favourites</button>
+            </p>
+          </form><br>
+          <fieldset>
+            <h3>Current Order</h3>
+            <p id="corder">
+              <table style="width: 100%">
+                <tr>
+                  <th>Manufacturer</th>
+                  <th>Product</th>
+                  <th>Quantity</th>
+                  <th>Size</th>
+                  <th>Packaging</th>
+                  <th>Cards</th>
+                  <th>Deco</th>
+                </tr>
+                <tr id="orderRow">
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </table>
+            </p>
+            </fieldset><br>
+            <p>
+                <button name="order" id="favord" class="btn btn-ordfav" onclick="ordFav()">Order From Favourites</button>
+            </p><br>  
+            <fieldset>
+              <h3>Overall Order</h3>
+              <p>
+                <table id="tableoverall" style="width: 100%">
+                  <tr>
+                    <th>Manufacturer</th>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Size</th>
+                    <th>Packaging</th>
+                    <th>Cards</th>
+                    <th>Deco</th>
+                  </tr>
+                </table>
+              </p>
+              </fieldset>
+              <p>
+                <button name="order" id="loyalty" class="btn btn-addfav" onclick="loyalty()">Check Loyalty</button>
+              </p>
+              <p>
+                <button name="order" id="placeord" class="btn btn-placeoord" onclick="placeord()">Place Order</button>
+              </p>
+        </div>
+      </main> 
+      <footer><p>Shakeel Jowhershah, +94771166462, all pictures taken from Unsplash, logos taken from company websites</p></footer>
+    </div>
+    <script src="Scripts/main.js"></script>
+  </body>
+</html>

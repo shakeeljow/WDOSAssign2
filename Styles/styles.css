@@ -1,0 +1,232 @@
+/* General styles */
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(17, 17, 17);
+}
+
+h1, h2{
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0.5em 0;
+}
+
+h1{
+    font-size: 1.8em;
+    text-align: center;
+    color: black;
+}
+
+#container{
+    min-width: 240px;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    background: lightblue;
+}
+
+main{
+    padding: 1em;
+    margin: 0;
+}
+
+header, footer{
+    background: rgb(27, 136, 130);
+    padding: 1em;
+}
+
+/* Mobile First */
+@media only screen and (min-width: 360px){
+    .mainNav ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        background-color: lightseagreen;
+        flex-flow: column wrap;
+    }
+
+    .mainNav{
+        position: static;
+        top: 0;
+    }
+
+    #homeContainer{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;    
+    }
+
+    #homeContainer .container{
+        margin: .8em .2em;
+        width: 100%;
+        box-sizing: border-box;
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+        background-color: rgba(255, 224, 179, 0.2);
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .mainNav{
+        position: sticky;
+        top: 0;
+    }
+
+    .mainNav ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        background-color: lightseagreen;
+        flex-flow: row wrap;
+    }
+
+    #homeContainer{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;    
+    }
+    
+    #homeContainer .container{
+        margin: .8em .2em;
+        width: calc(33% - .4em);
+        box-sizing: border-box;
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+        background-color: rgba(255, 224, 179, 0.2);
+    }
+
+}    
+
+.mainNav li{
+    flex-grow: 1;
+    width: calc(20% - 0);
+    border: .1em rgb(17, 17, 17) solid;
+    text-align: center;
+}
+
+.navText{
+    padding: 0;
+    text-align: center;
+}
+
+.mainNav a{
+    background-repeat: no-repeat;
+    background-size: 40px auto;
+    background-position: .5em center;
+    min-height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    display: block;
+    color: rgb(17, 17, 17);
+}
+
+.mainNav a:hover{
+    background-color:lightsteelblue;
+}
+
+.secNav{
+    position: sticky;
+    top: 0;
+}
+
+.secNav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 10pt;
+    display: flex;
+    background-color: lightseagreen;
+    flex-flow: row wrap;
+}
+
+.secNav li{
+    flex-grow: 1;
+    width: calc(50% - 0);
+    border: .1em rgb(17, 17, 17) solid;
+    text-align:center;
+}
+
+.secNav a{
+    background-repeat: no-repeat;
+    background-size: 40px auto;
+    background-position: .5em center;
+    min-height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    display: block;
+    color: rgb(17, 17, 17);
+}
+
+.secNav a:hover{
+    background-color:lightsteelblue;
+}
+
+/* Container styles */
+#homeContainer h3, #homeContainer p{
+    width: 90%;
+    padding: 0;
+    margin: 1em auto;
+}
+
+#prodContainer h3{
+    text-align: center;
+}
+
+/* Image styles */
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+}
+
+#mainImg{
+    width: 100%;
+    height: auto;
+}
+
+#homeContainer img{
+    max-width: 290px;
+}
+
+#prodContainer img{
+    max-width: 500px;
+}
+
+/* Table styles */
+table, th, td{
+    font-size: medium;
+    border: 1px solid black;
+    text-align: center;
+}
+
+th{
+    height: 50px;
+}
+
+td{
+    height: 30px;
+}
+
+/* buy now page */
+input[type="checkbox"]{
+    margin-right: 3%;
+    margin-bottom: 1%;
+}  
+
+#addord, #addfav, #loyalty, #placeord, #favord{
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%
+}
+
+#quan{
+    width: 10%;
+}
+ #buyprod, #size{
+     width: 50%;
+     margin-right: 2%;
+ }
+
+ #manuf{
+     width: 80%;
+ }
+
